@@ -1,0 +1,443 @@
+:root {
+    --primary: #000000;
+    --bg: #000000;
+}
+link {
+    display: none;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;   
+}
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: normal;
+}
+html::-webkit-scrollbar {
+    width: 2vh;
+    padding: 8rem;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #FE8E19;
+    /*border-radius: 2rem;*/
+}
+html::-webkit-scrollbar-track{
+    background-color: #000000;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(0, 0, 0, 0.75);
+    /*border-bottom: 1px solid #FE8E19;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.navbar .navbar-logo {
+    display: flex;
+    /* background-color: #ffd000; */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: #FE8E19;
+}
+
+.navbar .navbar-nav a {
+    color: #ffffff;
+    font-weight: 300;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: #FE8E19;
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #FE8E19;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.75);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: #FE8E19;
+}
+
+#menu1 {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/header1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.hero ::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    
+}
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1{
+    font-size: 4em;
+    color: #ffffff;
+}
+.hero .content h2{
+    font-family: 'Roboto Mono', monospace;
+}
+.hero .content h3{
+    font-weight: 100;
+    font-family: 'poppins';
+    font-size: 2em;
+    color: #ffffff;
+}
+.hero .content .cta{
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    border-radius: 2rem;
+    background-color: #FE8E19;
+}
+
+
+/* About */
+.about {
+    padding: 6rem 7% 1.4rem;
+    min-height: 100vh;
+}
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.about h2 , .produk h2, .contact h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.about h2 span , .produk h2 span, .contact h2 span{
+    color: #FE8E19;
+}
+
+.about img{
+    height: auto;
+    width: 450px;
+}
+.about-text {
+    width: 800px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text p{
+
+    font-weight: 700;
+    text-align: left;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    margin-top: 45px;
+}
+.about p span , .produk p span{
+    color: #FE8E19;
+}
+/* Menu Section */
+
+.produk {
+    padding: 6rem 7% 1.4rem;
+    min-width: 100vh;
+}
+.produk p .contact p{
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    list-style: none;
+}
+.produk h4 {
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    list-style: none;
+}
+
+.produk .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    /* padding-left: 4rem; */
+}
+.produk .row .item , .about .row .item{
+    /* background: #FE8E19; */
+    height: 400px;
+    width: 300px;
+    margin: 1rem auto 0.5rem;
+}
+
+.produk .row .item img {
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 10%;
+}
+
+.produk .row .item img:hover{
+    transform: scale(1.1);
+}
+
+.produk .row .item a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+.produk .row .item a:hover {
+    color: #FE8E19;
+}
+.produk .row .item .price{
+    display: flex;
+    height: auto;
+    /* align-items: center; */
+}
+.produk .row .item .price .price-btn{
+    align-items: center;
+    border: 2px solid #FE8E19;
+    color: #FE8E19;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+.produk .row .item .price .price-btn:hover{
+    color: whitesmoke;
+    background: #FE8E19;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+/* Contact */
+.contact {
+    /* background: #fff; */
+    padding: 5rem 7% 1.4rem;
+    min-height: 50vh;
+}
+.contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #222;
+}
+
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.contact .row form .input-group{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: var(--bg);
+    border: 1px solid #bababa;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-group input{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1rem;
+    background: none;
+    color: #fff;
+}
+.contact .row form .input-group textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1rem;
+    background: none;
+    color: #fff;
+    padding-left: 0.5rem;
+}
+
+.contact .row form .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #FE8E19;
+}
+.contact .row form .btn:hover{
+    color: #FE8E19;
+    background-color: #fff;
+}
+
+/* Footer */
+footer{
+    background-color: #FE8E19;
+    text-align: center;
+    padding: 1rem 0 1rem;
+    margin-top: 2rem;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75% ;
+    }
+}
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5% ;
+    }
+    #menu1 {
+        display: inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #ffffff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: #000;  
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+    .about .row{
+        flex-wrap: wrap;
+    }
+    .about .row .about-img img{
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+    .about.row .content{
+        padding: 0;
+    }
+    .about.row .content h3{
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .about.row .content p{
+        font-size: 1.6rem;
+    }
+    .produk .row{
+        flex-wrap: wrap;
+    }
+    .produk .row .item .image img {
+        height: 200px;
+        width: 200px;
+    }
+    .produk p{
+        font-size: 1.2 rem;
+    }
+    .contact .row {
+        flex-wrap: wrap;
+    }
+    .contact .row map {
+        height: 30rem;
+    }
+    .contact .row form {
+        padding-top: 0;
+    }
+
+}
+
+/* Mobile Phone */
+@media (max-width: 450px){ 
+    html {
+        font-size: 45% ;
+    }
+}
